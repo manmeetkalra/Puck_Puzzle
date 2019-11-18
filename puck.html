@@ -72,9 +72,7 @@ document.write("<a href='javascript:edit();'><img src='images/buttons/edit.gif' 
 document.writeln("<a href='javascript:game();'><img src='images/buttons/mode1.gif' height=16 width=48 border=0 name='mode'><\/a><br>");
 document.write("<a href='javascript:solve();'><img src='images/buttons/solve.gif' height=16 width=48 border=0 name='solve'><\/a>");
 document.write("<a href='javascript:solplay();'><img src='images/buttons/play.gif' height=16 width=48 border=0 name='play'><\/a>");
-document.writeln("<a href='javascript:help();'><img src='images/buttons/help.gif' height=16 width=48 border=0><\/a><br>");
-document.write("<a href='javascript:2cycle();'><img src='images/buttons/solve.gif' height=16 width=48 border=0 name='o2'><\/a>");
-document.write("<a href='javascript:3cycle();'><img src='images/buttons/play.gif' height=16 width=48 border=0 name='o3'><\/a>");
+document.writeln("<a href='javascript:help();'><img src='images/buttons/help.gif' height=16 width=48 border=0><\/a>");
 
 var mode = 0;   //0=normal  1=solving scrambled  2=edit  3=solving
 var seq = new Array();
@@ -502,9 +500,6 @@ function solve(){
         display();
     }
 }
-// fundamental move 2-2cycle
-
-//fundamental move 3-cycle
 
 function find(x,s){
     for(var i=s; i<12; i++)
