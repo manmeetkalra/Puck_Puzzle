@@ -3,7 +3,7 @@
 <head>
 <title>Hockey Puck</title>
 </head>
-<body bgcolor=white background="images/backgrnd/cubeback.gif">
+<body bgcolor=white background="images/background/hockey.gif">
 
 <div align=center><center>
 <script language="JavaScript1.1" type="text/javascript">
@@ -73,6 +73,8 @@ document.writeln("<a href='javascript:game();'><img src='images/buttons/mode1.gi
 document.write("<a href='javascript:solve();'><img src='images/buttons/solve.gif' height=16 width=48 border=0 name='solve'><\/a>");
 document.write("<a href='javascript:solplay();'><img src='images/buttons/play.gif' height=16 width=48 border=0 name='play'><\/a>");
 document.writeln("<a href='javascript:help();'><img src='images/buttons/help.gif' height=16 width=48 border=0><\/a>");
+document.writeln("<a href='javascript:TwoCycle();'><img src='images/buttons/index.png' height=16 width=48 border=1><\/a>");
+document.writeln("<a href='javascript:ThreeCycle();'><img src='images/buttons/index2.png' height=16 width=48 border=1><\/a>");
 
 var mode = 0;   //0=normal  1=solving scrambled  2=edit  3=solving
 var seq = new Array();
@@ -80,6 +82,7 @@ var edt;
 var posit = new Array ();
 var type = 0;   //0=numbers, 1=colours
 var parity=0;
+
 
 function initbrd(){
     if( type==0 ){
@@ -227,6 +230,31 @@ function clicked(x){
         if(x<6) showmove(1);
         else showmove(0);
     }
+}
+
+function TwoCycle()
+{
+	  for(i=0;i<5;i++)
+	  {
+	  	turnleft();
+	  	for(j=0;j<4;j++)
+	  	{
+	  		for(k=0;k<5;k++)
+	  			turnright();
+	  		flipright();
+	  	}
+	  }
+}
+
+function ThreeCycle()
+{
+	  for(i=0;i<4;i++)
+	  {
+	  	for(j=0;j<7;j++)
+	  		turnleft();
+
+	  		flipright();
+	  }
 }
 
 function turnleft(){ showmove(0); }
